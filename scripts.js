@@ -8,7 +8,24 @@
 $(document).ready(function(){
 
   // Code
+  // Seleziono i box per abbinare il click
+  $('.box').click(function(){
 
+    // Chiamata Ajax
+    $.ajax(
+      {
+        url: "https://flynn.boolean.careers/exercises/api/random/int",
+        method: "GET",
+        success: function (response) {
+          console.log(response.response);
+        },
+        error: function () {
+          alert("E' avvenuto un errore.");
+        }
+      }
+    );
+
+  });
 
 
   //////////////////////////////////////////////////
