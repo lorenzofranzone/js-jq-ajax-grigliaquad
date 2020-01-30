@@ -25,11 +25,12 @@ $(document).ready(function(){
           }
           else {
             thisBox.text(data.response);
-            if (parseInt(thisBox.text()) <= 5) {
-              thisBox.addClass('yellow');
-            } else {
-              thisBox.addClass('green');
-            }
+          }
+
+          if (parseInt(thisBox.text()) <= 5) {
+            thisBox.addClass('yellow');
+          } else {
+            thisBox.addClass('green');
           }
         },
         error: function () {
