@@ -11,13 +11,16 @@ $(document).ready(function(){
   // Seleziono i box per abbinare il click
   $('.box').click(function(){
 
+    var thisBox = $(this);
+
     // Chiamata Ajax
     $.ajax(
       {
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
-        success: function (response) {
-          console.log(response.response);
+        success: function (data) {
+          console.log(data.response);
+          thisBox.text(data.response);
         },
         error: function () {
           alert("E' avvenuto un errore.");
