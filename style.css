@@ -1,0 +1,64 @@
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* SIZE */
+  width: 100%;
+  height: 100vh;
+  /* STYLE */
+  background: lightgrey;
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.container {
+  /* SIZE */
+  max-width: 600px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  display: flex;
+  flex-wrap: wrap;
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.box {
+  /* SIZE */
+  width: 100px;
+  height: 100px;
+  /* STYLE */
+  border: 1px solid darkgrey;
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* POSITION */
+  /* INTERACTION */
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.box:hover {
+  background: rgba(0,0,0,.05);
+}
+
+.yellow {
+  background: yellow;
+}
+
+.green {
+  background: green;
+}
