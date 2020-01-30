@@ -19,8 +19,18 @@ $(document).ready(function(){
         url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
         success: function (data) {
-          console.log(data.response);
-          thisBox.text(data.response);
+          // console.log(data.response);
+          if (thisBox.text().length != 0) { // Se NON è vuoto
+            alert('Hai già generato un numero');
+          }
+          else {
+            thisBox.text(data.response);
+            if (parseInt(thisBox.text()) <= 5) {
+              thisBox.addClass('yellow');
+            } else {
+              thisBox.addClass('green');
+            }
+          }
         },
         error: function () {
           alert("E' avvenuto un errore.");
